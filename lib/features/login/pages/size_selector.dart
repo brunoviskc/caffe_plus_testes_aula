@@ -30,6 +30,7 @@ class SizeSelector extends StatelessWidget {
               ),
 
               const SizedBox(height: 12),
+              Padding(padding: EdgeInsets.all(10)),
 
               SizeOption(
                 label: '12 oz',
@@ -37,7 +38,8 @@ class SizeSelector extends StatelessWidget {
                 onTap: () => onSelected('12 oz'),
               ),
 
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
+              Padding(padding: EdgeInsets.all(10)),
 
               SizeOption(
                 label: '16 oz',

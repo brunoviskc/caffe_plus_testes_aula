@@ -1,3 +1,4 @@
+import 'package:coffe_plus/features/login/pages/milk_selector.dart';
 import 'package:coffe_plus/features/login/pages/productImage.dart';
 import 'package:coffe_plus/features/login/pages/productInfo.dart';
 import 'package:coffe_plus/features/login/pages/header.dart';
@@ -14,6 +15,7 @@ class CoffePage extends StatefulWidget {
 
 class _CoffePageState extends State<CoffePage> {
   String tamanhoSelecionado = '12 oz';
+  String leiteSelecionado = 'Whole Milk';
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,14 @@ class _CoffePageState extends State<CoffePage> {
                         });
                       },
                     ),
-                    // MilkSelector(),
+                    MilkSelector(
+                      leiteSelecionado: leiteSelecionado,
+                      onSelected: (leite) {
+                        setState(() {
+                          leiteSelecionado = leite;
+                        });
+                      },
+                    ),
                     // SweetnessSelector(),
                   ],
                 ),
